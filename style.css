@@ -1,7 +1,8 @@
-main {
-  margin: 2rem;
+header {
+  grid-column: 1 / span 2;
 }
 h1 {
+  font-size: 2rem;
 }
 
 article {
@@ -9,7 +10,6 @@ article {
   background-color: burlywood;
   border: 2px solid brown;
   border-radius: 10px;
-  max-width: 300px;
 }
 
 h2 {
@@ -20,7 +20,7 @@ h3 {
   margin: 1rem 1rem 0.5rem 2rem;
 }
 
-main {
+body {
   display: grid;
-  grid-template-columns: repeat (auto-fill, minmax(300px, fr));
+  grid-template-columns: 1fr 1fr;
 }

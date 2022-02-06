@@ -8,7 +8,7 @@ const favourite = [
   {
     name: "Good Fortune",
     artist: "PJ Harvey",
-    memory: "swinging my handbag",
+    memory: "Swinging my handbag",
   },
 
   {
@@ -44,7 +44,7 @@ const favourite = [
   {
     name: "Cannonball",
     artist: "The Breeders",
-    memory: "Third year",
+    memory: "Our 4th year flat",
   },
 
   {
@@ -59,3 +59,16 @@ const favourite = [
     memory: "That last year in Scotland",
   },
 ];
+
+favourite.forEach(showCard);
+
+function showCard(favouriteSong) {
+  const templateElement = document.querySelector("#songTemplate").content;
+  const myClone = templateElement.cloneNode(true);
+
+  myClone.querySelector(".song").textContent = favouriteSong.name;
+  myClone.querySelector(".artist").textContent = favouriteSong.artist;
+  myClone.querySelector(".memory").textContent = favouriteSong.memory;
+  const parentElement = document.querySelector("body");
+  parentElement.appendChild(myClone);
+}
